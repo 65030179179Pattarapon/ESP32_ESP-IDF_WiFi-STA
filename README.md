@@ -2,9 +2,12 @@
 ในใบงานนี้ เราจะเรียนรู้การตั้งค่า ESP32 ในโหมด Station (STA) โดยใช้ ESP-IDF 
 นักศึกษาจะได้ทำความรู้จักกับ API ที่จำเป็นสำหรับการเชื่อมต่อ W-Fi รายละเอียดเกี่ยวกับไดรเวอร์ Wi-Fi 
 และตัวอย่างสำหรับการเขียนโปรแกรม ESP-IDF เพื่อเชื่อมต่อกับเครือข่ายไร้สาย
+### ลิ้ง https://github.com/65030179179Pattarapon/ESP32_ESP-IDF_WiFi-STA-cook-book.git
 
 ## APIs สำหรับการเชื่อมต่อ  ESP32 เข้ากับ Wi-Fi  โดยใช้ ESP-IDF
 ฟังก์ชันสำคัญในการเชื่อมต่อ ESP32 กับ Wi-Fi จะอยู่ในไลรารี่  esp_wifi (ต้อง include esp_wifi.h) สามารถใช้ในการตั้งค่าและตรวจสอบการทำงานของเครือข่าย Wi-Fi ESP32 รวมถึงการกำหนดค่าทั้งโหมด Access point และ Wi-Fi station ของ ESP32 ในโหมดความปลอดภัยต่างๆ เช่น WPA, WEP ฯลฯ การตรวจสอบแพ็กเก็ต Wi-Fi และการสแกนจุดเชื่อมต่อที่อยู่ในระยะใกล้เคียง 
+## แก้ไขที่ idf.py menuconfig  ไปที่ example config ตั้งค่ารหัส wifi\
+![Screenshot 2024-10-28 204851](https://github.com/user-attachments/assets/0be20ff3-af13-4a45-ab5e-c4fc1d016ec7)
 
 ใบงานนี้ เราจะเน้นที่วิธีเชื่อมต่อบอร์ด ESP32 กับจุดเข้าใช้งานโดยการกำหนดค่าในโหมดสถานีซึ่งเรียกอีกอย่างว่าโหมด STA
 
@@ -69,4 +72,12 @@ esp_wifi_connect()
 ```
 
 ## [>> เฟสการทำงานของ ESP32 Wi-Fi >>](./Phase-of-WiFi-Connection.md)
+### หน้าตอนเชื่อม wifi ไม่สำเร็จ
+![Screenshot 2024-10-28 203540](https://github.com/user-attachments/assets/867cd313-20f0-43c0-a17e-8860e49b5c30)
 
+
+### หน้าตอนเชื่อม wifi สำเร็จ
+![Screenshot 2024-10-28 205858](https://github.com/user-attachments/assets/1e191797-9a23-493f-816e-146fb194234a)
+
+
+## สรุป ใบงานนี้จะตรวจสอบการเชื่อมต่อ ถ้าสำเร็จ บนterminal จะแสดงข้อมูล IP Address ที่ได้รับ
